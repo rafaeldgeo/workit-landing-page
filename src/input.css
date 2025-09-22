@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Manrope:wght@200..800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-cgreen: #44ffa1;
+  --color-cpurple-900: #24053e;
+  --color-cpurple-500: #584d62;
+  --color-cpurple-100: #fcf8ff;
+  --font-fraunces: "Fraunces", serif;
+  --font-manrope: "Manrope", sans-serif;
+}
