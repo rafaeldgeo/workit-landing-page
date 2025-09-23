@@ -12,21 +12,23 @@
     <link href="./src/output.css" rel="stylesheet" />
     <title>Frontend Mentor | Workit landing page</title>
   </head>
-  <body class="bg-cpurple-100">
-    <div>
-      <header>
-        <nav>
-          <img src="./assets/images/logo-light.svg" alt="logo Workit" />
-          <a href="#">Apply for access</a>
+  <body class="bg-cpurple-100 box-border max-w-screen w-full min-h-screen">
+    <div class="max-w-360 mx-auto">
+      <header class="bg-cpurple-900 text-white">
+        <nav class="flex pt-8 lg:pt-14 font-manrope items-center px-5 sm:px-11 lg:px-20">
+          <img src="./assets/images/logo-light.svg" alt="logo Workit" width="97" height="26" />
+          <a class="hover:text-cgreen font-bold text-lg/8 underline underline-offset-8 decoration-[0.1875rem] decoration-cgreen ms-auto" href="#">Apply for access</a>
         </nav>
-        <div>
-          <h1>Data tailored to your needs.</h1>
-          <button>Learn more</button>
-          <img src="./assets/images/image-hero.webp" alt="smartphone" />
+        <div class="px-5 sm:px-11 lg:px-20">
+          <div class="flex flex-col items-center gap-y-10 pt-14 pb-36 lg:pb-74">
+            <h1 class="font-fraunces text-5xl sm:text-6xl lg:text-[5rem] font-semibold w-full max-w-[10ch] text-center">Data <span class="underline underline-offset-8 decoration-[0.1875rem] decoration-cgreen">tailored</span> to your needs.</h1>
+            <button class="bg-cgreen hover:bg-transparent text-cpurple-900 hover:text-cgreen border-2 border-cgreen text-base/[1.8] sm:text-lg font-bold px-8 py-3 cursor-pointer">Learn more</button>
+          </div>
+          <!-- <img src="./assets/images/image-hero.webp" alt="smartphone" /> -->
         </div>
       </header>
-      <main>
-        <section>
+      <main class="">
+        <section class="px-5 sm:px-11 lg:px-20">
           <ul>
             <li>
               <span>1</span>
@@ -73,7 +75,7 @@
           </div>
         </section>
       </main>
-      <footer>
+      <footer class="px-5 sm:px-11 lg:px-20">
         <img src="./assets/images/logo-light.svg" alt="logo Workit" />
         <div>
           <svg
