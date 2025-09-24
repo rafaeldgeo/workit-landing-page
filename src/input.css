@@ -6,29 +6,36 @@
   --color-cpurple-900: #24053e;
   --color-cpurple-500: #584d62;
   --color-cpurple-100: #fcf8ff;
-  --font-fraunces: "Fraunces", serif;
   --font-manrope: "Manrope", sans-serif;
+  --font-fraunces: "Fraunces", serif;
 }
 
-main::before {
+main section:nth-child(n)::before {
+  clip-path: ellipse(65% 100% at 50% 0%);
   content: "";
   display: block;
-  width: 100%;
-  height: 72px;
-  /* clip-path: ellipse(52% 100% at top); */
-  clip-path: ellipse(65% 100% at 50% 0%);
-  background-color: #24053e;
+  height: 4.5rem;
   overflow: hidden;
+  width: 100%;
 }
 
-@media screen and (min-width: 768px) {
-  main::before {
+main section:nth-child(1)::before {
+  background-color: var(--color-cpurple-900);
+}
+
+main section:nth-child(2)::before {
+  background-color: var(--color-cpurple-100);
+}
+
+@media screen and (min-width: 47.99875rem) {
+  main section:nth-child(n)::before {
     clip-path: ellipse(52% 100% at 50% 0%);
   }
 }
 
-@media screen and (min-width: 1280px) {
-  main::before {
-    clip-path: ellipse(52% 100% at 50% 0%);
+@media screen and (min-width: 79.99875rem) {
+  main section:nth-child(n)::before {
+    clip-path: ellipse(51% 100% at 50% 0%);
   }
 }
+
