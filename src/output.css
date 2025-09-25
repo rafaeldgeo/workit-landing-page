@@ -11,6 +11,7 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
@@ -21,6 +22,7 @@
     --text-5xl--line-height: 1;
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
+    --font-weight-normal: 400;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --default-font-family: var(--font-sans);
@@ -208,8 +210,35 @@
   .table {
     display: table;
   }
+  .h-2 {
+    height: calc(var(--spacing) * 2);
+  }
+  .h-50 {
+    height: calc(var(--spacing) * 50);
+  }
+  .h-200 {
+    height: calc(var(--spacing) * 200);
+  }
   .h-\[3rem\] {
     height: 3rem;
+  }
+  .h-\[4\.125rem\] {
+    height: 4.125rem;
+  }
+  .h-\[12\.5rem\] {
+    height: 12.5rem;
+  }
+  .h-\[12\.\] {
+    height: 12.;
+  }
+  .h-\[18\.5rem\] {
+    height: 18.5rem;
+  }
+  .h-\[18\.75rem\] {
+    height: 18.75rem;
+  }
+  .h-\[300px\] {
+    height: 300px;
   }
   .min-h-screen {
     min-height: 100vh;
@@ -229,11 +258,50 @@
   .max-w-screen {
     max-width: 100vw;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
+  }
+  .grid-cols-\[335px\] {
+    grid-template-columns: 335px;
+  }
+  .grid-cols-\[max\(1fr\,335px\)\] {
+    grid-template-columns: max(1fr, 335px);
+  }
+  .grid-cols-\[max\(min-content\,335px\)\] {
+    grid-template-columns: max(min-content, 335px);
+  }
+  .grid-cols-\[min\(1fr\,335px\)\] {
+    grid-template-columns: min(1fr, 335px);
+  }
+  .grid-cols-\[min\(100px\,335px\)\] {
+    grid-template-columns: min(100px, 335px);
+  }
+  .grid-cols-\[minmax\(100px\,335px\)\] {
+    grid-template-columns: minmax(100px,335px);
+  }
+  .grid-cols-\[minmax\(100px\,_335px\)\] {
+    grid-template-columns: minmax(100px, 335px);
+  }
+  .grid-cols-\[minmax\(335px\)\] {
+    grid-template-columns: minmax(335px);
+  }
+  .grid-cols-\[minmax\(min-content\,20\.9375rem\)\] {
+    grid-template-columns: minmax(min-content,20.9375rem);
+  }
+  .grid-cols-\[minmax\(min-content\,20\.93335px\)\] {
+    grid-template-columns: minmax(min-content,20.93335px);
+  }
+  .grid-cols-\[minmax\(min-content\,335px\)\] {
+    grid-template-columns: minmax(min-content,335px);
   }
   .grid-rows-3 {
     grid-template-rows: repeat(3, minmax(0, 1fr));
@@ -247,8 +315,23 @@
   .items-center {
     align-items: center;
   }
+  .items-end {
+    align-items: flex-end;
+  }
+  .items-start {
+    align-items: flex-start;
+  }
   .justify-center {
     justify-content: center;
+  }
+  .justify-items-center {
+    justify-items: center;
+  }
+  .gap-y-0 {
+    row-gap: calc(var(--spacing) * 0);
+  }
+  .gap-y-8 {
+    row-gap: calc(var(--spacing) * 8);
   }
   .gap-y-10 {
     row-gap: calc(var(--spacing) * 10);
@@ -300,8 +383,14 @@
   .pt-14 {
     padding-top: calc(var(--spacing) * 14);
   }
+  .pt-16 {
+    padding-top: calc(var(--spacing) * 16);
+  }
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
+  }
+  .pb-16 {
+    padding-bottom: calc(var(--spacing) * 16);
   }
   .pb-36 {
     padding-bottom: calc(var(--spacing) * 36);
@@ -315,6 +404,10 @@
   .font-manrope {
     font-family: var(--font-manrope);
   }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
   .text-2xl\/\[1\.2\] {
     font-size: var(--text-2xl);
     line-height: 1.2;
@@ -323,9 +416,17 @@
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
   }
+  .text-base {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+  }
   .text-base\/\[1\.8\] {
     font-size: var(--text-base);
     line-height: 1.8;
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
   }
   .text-lg\/8 {
     font-size: var(--text-lg);
@@ -338,6 +439,10 @@
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
+  }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
   }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
@@ -399,9 +504,19 @@
       padding-top: calc(var(--spacing) * 0);
     }
   }
+  .sm\:pt-14 {
+    @media (width >= 40rem) {
+      padding-top: calc(var(--spacing) * 14);
+    }
+  }
   .sm\:pb-7 {
     @media (width >= 40rem) {
       padding-bottom: calc(var(--spacing) * 7);
+    }
+  }
+  .sm\:pb-11 {
+    @media (width >= 40rem) {
+      padding-bottom: calc(var(--spacing) * 11);
     }
   }
   .sm\:text-start {
@@ -426,6 +541,71 @@
       font-size: 1.75rem;
     }
   }
+  .lg\:grid-cols-3 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .lg\:grid-cols-88 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(88, minmax(0, 1fr));
+    }
+  }
+  .lg\:grid-cols-\[22rem\] {
+    @media (width >= 64rem) {
+      grid-template-columns: 22rem;
+    }
+  }
+  .lg\:grid-cols-\[22rem_22rem\] {
+    @media (width >= 64rem) {
+      grid-template-columns: 22rem 22rem;
+    }
+  }
+  .lg\:grid-cols-\[22rem_22rem_22rem\] {
+    @media (width >= 64rem) {
+      grid-template-columns: 22rem 22rem 22rem;
+    }
+  }
+  .lg\:grid-cols-\[minmax\(min-content\,20\.9375rem\)22rem_22rem_22rem\] {
+    @media (width >= 64rem) {
+      grid-template-columns: minmax(min-content,20.9375rem)22rem 22rem 22rem;
+    }
+  }
+  .lg\:grid-cols-\[minmax\(min-content\,22rem\)22rem_22rem_22rem\] {
+    @media (width >= 64rem) {
+      grid-template-columns: minmax(min-content,22rem)22rem 22rem 22rem;
+    }
+  }
+  .lg\:grid-cols-\[minmax\(min-content\,22rem\)_22rem_22rem_22rem\] {
+    @media (width >= 64rem) {
+      grid-template-columns: minmax(min-content,22rem) 22rem 22rem 22rem;
+    }
+  }
+  .lg\:grid-cols-\[minmax\(min-content\,22rem\)_minmax\(min-content\,22rem\)_22rem_22rem\] {
+    @media (width >= 64rem) {
+      grid-template-columns: minmax(min-content,22rem) minmax(min-content,22rem) 22rem 22rem;
+    }
+  }
+  .lg\:grid-cols-\[minmax\(min-content\,22rem\)_minmax\(min-content\,22rem\)_minmax\(min-content\,22rem\)\] {
+    @media (width >= 64rem) {
+      grid-template-columns: minmax(min-content,22rem) minmax(min-content,22rem) minmax(min-content,22rem);
+    }
+  }
+  .lg\:grid-rows-1 {
+    @media (width >= 64rem) {
+      grid-template-rows: repeat(1, minmax(0, 1fr));
+    }
+  }
+  .lg\:gap-x-8 {
+    @media (width >= 64rem) {
+      column-gap: calc(var(--spacing) * 8);
+    }
+  }
+  .lg\:gap-y-0 {
+    @media (width >= 64rem) {
+      row-gap: calc(var(--spacing) * 0);
+    }
+  }
   .lg\:px-20 {
     @media (width >= 64rem) {
       padding-inline: calc(var(--spacing) * 20);
@@ -434,6 +614,16 @@
   .lg\:pt-14 {
     @media (width >= 64rem) {
       padding-top: calc(var(--spacing) * 14);
+    }
+  }
+  .lg\:pt-22 {
+    @media (width >= 64rem) {
+      padding-top: calc(var(--spacing) * 22);
+    }
+  }
+  .lg\:pb-36 {
+    @media (width >= 64rem) {
+      padding-bottom: calc(var(--spacing) * 36);
     }
   }
   .lg\:pb-74 {
@@ -468,6 +658,16 @@
       font-size: 5rem;
     }
   }
+  .lg\:text-\[clamp\(\)\] {
+    @media (width >= 64rem) {
+      font-size: clamp();
+    }
+  }
+  .lg\:text-\[cl2rem\] {
+    @media (width >= 64rem) {
+      color: cl2rem;
+    }
+  }
 }
 main section:nth-child(n)::before {
   clip-path: ellipse(65% 100% at 50% 0%);
@@ -479,6 +679,7 @@ main section:nth-child(n)::before {
 }
 main section:nth-child(1)::before {
   background-color: var(--color-cpurple-900);
+  margin-block-end: 5rem;
 }
 main section:nth-child(2)::before {
   background-color: var(--color-cpurple-100);
@@ -487,10 +688,16 @@ main section:nth-child(2)::before {
   main section:nth-child(n)::before {
     clip-path: ellipse(52% 100% at 50% 0%);
   }
+  main section:nth-child(1)::before {
+    margin-block-end: 8.5rem;
+  }
 }
 @media screen and (min-width: 79.99875rem) {
   main section:nth-child(n)::before {
     clip-path: ellipse(51% 100% at 50% 0%);
+  }
+  main section:nth-child(1)::before {
+    margin-block-end: 10.0625rem;
   }
 }
 @property --tw-rotate-x {
