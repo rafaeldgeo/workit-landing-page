@@ -8,6 +8,8 @@
   --color-cpurple-100: #fcf8ff;
   --font-manrope: "Manrope", sans-serif;
   --font-fraunces: "Fraunces", serif;
+  --text-title: clamp(1.5rem, 3.65vw, 2rem);
+  --text-paragraph: min(1rem, 2.08vw, 1.125rem);
 }
 
 main section:nth-child(n)::before {
