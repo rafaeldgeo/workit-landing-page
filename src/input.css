@@ -13,36 +13,38 @@
 }
 
 main section:nth-child(n)::before {
-  clip-path: ellipse(65% 100% at 50% 0%);
+  clip-path: ellipse(53% 100% at 50% 0%);
   content: "";
   display: block;
-  height: 4.5rem;
+  height: 1.5rem;
   overflow: hidden;
   width: 100%;
 }
 
 main section:nth-child(1)::before {
   background-color: var(--color-cpurple-900);
-  margin-block-end: 5rem;
+  margin-block-end: clamp(5rem, 21.34vw, 8.5rem);
 }
 
 main section:nth-child(2)::before {
   background-color: var(--color-cpurple-100);
 }
 
-@media screen and (min-width: 47.99875rem) {
+@media screen and (min-width: 48rem) {
   main section:nth-child(n)::before {
-    clip-path: ellipse(52% 100% at 50% 0%);
+    clip-path: ellipse(53% 100% at 50% 0%);
+    height: 3.5rem;
   }
 
   main section:nth-child(1)::before { 
-    margin-block-end: 8.5rem;
+    margin-block-end: clamp(8.5rem, 12.58vw, 10.0625rem);
   }
 }
 
-@media screen and (min-width: 79.99875rem) {
+@media screen and (min-width: 80rem) {
   main section:nth-child(n)::before {
-    clip-path: ellipse(51% 100% at 50% 0%);
+    height: 4.5rem;
+    clip-path: ellipse(53% 100% at 50% 0%);
   }
 
    main section:nth-child(1)::before { 
